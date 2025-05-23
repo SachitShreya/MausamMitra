@@ -105,3 +105,27 @@ button:hover {
     margin-top: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+/* Add this to your styles.css */
+.weather-card {
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 24px 32px;
+    margin: 0 auto 24px auto;
+    max-width: 350px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+.weather-card h2 {
+    margin: 0 0 12px 0;
+    color: #333;
+}
+.weather-card .temp {
+    font-size: 2.5rem;
+    color: #0077b6;
+    margin-bottom: 8px;
+}
+.weather-card .desc {
+    font-size: 1.1rem;
+    color: #555;
+}

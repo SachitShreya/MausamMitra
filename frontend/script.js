@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 let map, marker;
 
+
 function getWeather() {
     const location = document.getElementById('location').value;
     if (!location) return;
@@ -42,15 +43,15 @@ function getWeather() {
             const weatherDiv = document.getElementById('weatherResult');
             if (data.error) {
                 weatherDiv.innerHTML = `<span style="color:red">${data.error}</span>`;
-                if (map) map.remove();
                 return;
             }
             weatherDiv.innerHTML = `
-                <strong>${data.location}</strong><br>
-                Temperature: ${data.temperature}°C<br>
-                ${data.description}
+                <div class="weather-card">
+                    <h2>${data.location}</h2>
+                    <div class="temp">${data.temperature}°C</div>
+                    <div class="desc">${data.description}</div>
+                </div>
             `;
-            showMap(data.location);
         });
 }
 
